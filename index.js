@@ -46,7 +46,7 @@ app.get("/create-thread-message", async (req, res) => {
 app.post("/ask", async (req, res) => {
   try {
     const question = req.body.question;
-    const threadId = "thread_JC6OCRI9f5dYCAqT8qgBlBrK";
+    const threadId = "thread_2eL4gJeL3Wk1NpIqYhOedOjp";
 
     const message = await openai.beta.threads.messages.create(threadId, {
       role: "user",
@@ -61,7 +61,7 @@ app.post("/ask", async (req, res) => {
 
 app.get("/run-assistant", async (req, res) => {
   try {
-    const threadId = "thread_JC6OCRI9f5dYCAqT8qgBlBrK";
+    const threadId = "thread_2eL4gJeL3Wk1NpIqYhOedOjp";
 
     const run = await openai.beta.threads.runs.create(threadId, {
       assistant_id: "asst_pSk3Endw49XCedzJyt0GYVBE",
@@ -76,7 +76,7 @@ app.get("/run-assistant", async (req, res) => {
 
 app.post("/check-run", async (req, res) => {
   try {
-    const threadId = "thread_JC6OCRI9f5dYCAqT8qgBlBrK";
+    const threadId = "thread_2eL4gJeL3Wk1NpIqYhOedOjp";
     //const runId = "run_gFnxlt1NZOd4yv5NC1iKc5wl";
     const runId = req.body.runId;
 
@@ -90,7 +90,7 @@ app.post("/check-run", async (req, res) => {
 
 app.get("/get-message", async (req, res) => {
   try {
-    const threadId = "thread_JC6OCRI9f5dYCAqT8qgBlBrK";
+    const threadId = "thread_2eL4gJeL3Wk1NpIqYhOedOjp";
 
     // const messages = await openai.beta.threads.messages.list(threadId);
     // console.log(messages.data[0]);
